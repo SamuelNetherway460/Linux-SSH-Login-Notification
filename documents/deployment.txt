@@ -1,0 +1,7 @@
+Deployment
+
+1. Clone repository to target machine
+2. cp /Linux-SSH-Login-Notification/build/login-notify.sh /path/to/chosen/script/destination/
+3. Execute chmod +x login-notify.sh to make the script executable
+4. Add the following line to /etc/pam.d/sshd
+   session optional pam_exec.so seteuid /path/to/login-notify.sh
